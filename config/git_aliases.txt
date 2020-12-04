@@ -1,0 +1,6 @@
+alias gis='git status'
+alias gid='git diff'
+alias gia='git add'
+alias gic='git commit'
+alias giu='git pull'
+alias gip='git push'

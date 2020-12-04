@@ -21,11 +21,24 @@ def installApps(pacman, apps):
                 logging.info('Install app: ' + str(app))
                 os.system(command.format(app=app,flags="-y"))
             else:
-                logging.warning("App: {app} not found!".format(app=app)))
+                logging.warning("App: {app} not found!".format(app=app))
         os.system("sudo apt-get autoremove")
     else:
         logging.error("Not supported packet manager")
     
+def removeApps(pacman, apps):
+    if pacman == 'apt':
+        os.system("sudo apt-get update")
+        command = "sudo apt-get remove {app} {flags}"
+        for app in apps:
+            if os.system("apt-cache show {app}".format(app=app)) == 0:
+                logging.info('Remove app: ' + str(app))
+                os.system(command.format(app=app,flags="-y"))
+            else:
+                logging.warning("App: {app} not found!".format(app=app))
+        os.system("sudo apt-get autoremove")
+    else:
+        logging.error("Not supported packet manager")
 
 def main():
     # configure logger
@@ -35,7 +48,9 @@ def main():
     # read configuration
     conf = readConfig("./script_config.yaml")
     # install apps
-    installApps(conf["packetmanager"], conf["applications"])
+    #installApps(conf["packetmanager"], conf["applications"])
+    # remove apps
+    removeApps(conf["packetmanager"], conf["applications"])
   
   
 main()

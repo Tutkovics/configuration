@@ -14,6 +14,7 @@ def installApps(pacman, apps):
         os.system("sudo apt-get update")
         command = "sudo apt-get install {app} {flags}"
         for app in apps:
+            logging.info('Install app: ' + str(app))
             os.system(command.format(app=app,flags="-y"))
         os.system("sudo apt-get autoremove")
     else:

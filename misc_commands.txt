@@ -1,2 +1,3 @@
 sudo update-alternatives --config editor  # change default editor 
+tutkovics	ALL=(ALL) NOPASSWD:ALL  # run sudo commands without asking password (/etc/sudoers)
 

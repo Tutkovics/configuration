@@ -3,4 +3,4 @@ tutkovics	ALL=(ALL) NOPASSWD:ALL  # run sudo commands without asking password (/
 gsettings set org.gnome.desktop.sound event-sounds false  # disable system sounds eg: functionkey sound
 # rsync -aAXHv --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found"} / /media/backup  # full system copy to backup
 
- 
+xdg-mime default code.desktop text/plain  # change default editor when open text file

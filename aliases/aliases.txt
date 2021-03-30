@@ -1,9 +1,6 @@
 # Not aliases but useful
 HISTCONTROL=ignoreboth            # Ignore entries with leading white space and dupes.
 HISTIGNORE="ls:ll:cd:fg:j:jobs"   # Uninteresting commands to not record in history.
-shopt -s histappend               # Append history to file, don't overwrite.
-shopt -s histverify               # Show expanded history before running it.
-shopt -s cmdhist                  # Store multiline cmds as single
 
 alias ..='cd ..'
 alias ...='cd ../..'

@@ -1,6 +1,6 @@
 # Not aliases but useful
-HISTCONTROL=ignoreboth            # Ignore entries with leading white space and dupes.
-HISTIGNORE="ls:ll:cd:fg:j:jobs"   # Uninteresting commands to not record in history.
+# HISTCONTROL=ignoreboth            # Ignore entries with leading white space and dupes.
+# HISTIGNORE="ls:ll:cd:fg:j:jobs"   # Uninteresting commands to not record in history.
 
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -17,13 +17,12 @@ alias rm='printf "Use: trash [FILE]\nOr bypass the alias: \\\rm [FILE]\n"; false
 alias p='ping google.com'
 alias install='sudo apt install -y'
 alias remove='sudo apt remove -y'
-alias tmux='tmux -f /home/tutkovics/configuration/dots/.tmux.conf'
-# alias mkcd=''
 alias reload='source ~/.zshrc'
 alias distro='cat /etc/*-release'
 alias myip='curl http://ipecho.net/plain; echo'
 
 # Handy Tmux shortcuts
+alias tmux='tmux -f /home/tutkovics/configuration/dots/.tmux.conf'
 alias t='tmux'
 alias tl='tmux list-sessions'
 alias tn='tmux new-session -s'
@@ -31,12 +30,14 @@ alias ta='tmux attach-session -t'
 alias tk='tmux kill-session -t'
 
 # Add kubectl autocomplete 
-source <(kubectl completion zsh)
+# source <(kubectl completion zsh)
+source <(kubectl completion bash)
 
-alias -g G='| grep'
-alias -g L='| less'
-alias -g H='| head'
-alias -g T='| tail'
-alias -g c='| wc -l'
-alias -g N='| /dev/null'
-alias -g S='| sort'
+
+#alias -g G='| grep'
+#alias -g L='| less'
+#alias -g H='| head'
+#alias -g T='| tail'
+#alias -g c='| wc -l'
+#alias -g N='| /dev/null'
+#alias -g S='| sort'

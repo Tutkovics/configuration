@@ -1,0 +1,14 @@
+#!/bin/bash
+
+git pull
+git add .
+git status
+
+# Current time
+now=$(date +"%F %T")
+
+message=${1:-Test - ${now}}   
+
+git commit -m "$message"
+
+git push

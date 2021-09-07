@@ -14,3 +14,9 @@ source $HOME/configuration/aliases/git_aliases.txt
 alias tmux='tmux -f $HOME/configuration/dots/.tmux.conf'
 EOF
 ```
+
+Use bookmarks feature. 
+```
+# e.g., create new bookmark
+ln -s ~/configuration/ .bookmarks/@configuration 
+```

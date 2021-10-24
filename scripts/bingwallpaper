@@ -112,6 +112,8 @@ do
     #Logging
     # Set the view to zoom,
     gsettings set org.gnome.desktop.background picture-options "zoom"
+    # Set lock screen
+    gsettings set org.gnome.desktop.screensaver picture-uri "file://$path$imgName"
   else
     echo "$XDG_CURRENT_DESKTOP not supported."
     break
